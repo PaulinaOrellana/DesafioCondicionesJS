@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío - Parte 2</title>
+</head>
+<body>
+    <div style="display:flex; justify-content: space-between;">
+        <div style="display:flex; flex-direction: column; width:25%; padding: 20px;">
+            <img src="assets/img/instagram.png" alt="logo" width="100%" height="250"/>
+            <br>
+            <input type="number" id="numero1" value="0"/>
+        </div>
+        <div style="display:flex; flex-direction: column; width:25%;padding: 20px;">
+            <img src="assets/img/spotify.png" alt="logo" width="100%" height="250"/>
+            <br>
+            <input type="number" id="numero2" value="0"/>
+        </div>
+        <div style="display:flex; flex-direction: column; width:25%;padding: 20px;">
+            <img src="assets/img/whatsapp.png" alt="logo" width="100%" height="250"/>
+            <br>
+            <input type="number" id="numero3" value="0"/>
+        </div>
+    </div>
+    <p style="display: flex; justify-content: center; flex-direction: row;" id="resultado"></p>
+    <div style="display: flex; justify-content: center; flex-direction: row;" >
+    <button type="button" onclick="
+    var inputNumero1 = document.querySelector('#numero1');
+    var inputNumero2 = document.querySelector('#numero2');
+    var inputNumero3 = document.querySelector('#numero3');
+    var resultado = document.querySelector('#resultado');
+
+    var suma = Number(inputNumero1.value) + Number(inputNumero2.value) + Number(inputNumero3.value);
+   
+    if (suma > 10){
+       resultado.innerHTML = 'Llevas demasiados stickers';
+    } else{
+        resultado.innerHTML = 'Llevas  ' + suma + '  stickers';
+    }
+       
+    ">Verificar</button>
+   </div>
+</body>
+</html>
